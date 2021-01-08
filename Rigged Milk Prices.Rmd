@@ -1,0 +1,377 @@
+---
+title: "Rigged Milk Prices"
+output:
+  html_document: default
+  pdf_document: default
+Team Name: Jollof
+Group: Cole Hanniwell, Einstein Oyewole
+---
+
+# Introduction
+
+__Dataset and Variables__
+
+The data used in this project is the gotten from the bids recieved from diaries competing for the milk contracts between 1983 and 1991 of fluid milk products for the Northern Kentucky school districts. The dataset consists of the following characteristics(variables): Year, Market, Winner, District, WWBID, LFWBID, LFCBID.
+Variable Year represents the Year in which milk contact awarded.
+Variable Market represents the Northern Kentucky Market (Tri-COUNTY or SURROUND) Variable Winner represents the name of winning dairy.
+Variable WWBID represents the Winning bid price of whole white milk (dollars per half-pint).
+Variable LFWBID represents the Winning bid price of low-fat white milk (dollars per half-pint).
+Variable LFCBID represents the Winning bid price of low-fat chocolate milk (dollars per half-pint) School district number.
+
+__Types of Variables__
+
+The variable Year is a Ordinal Categorical variable. The variable Market is a nominal categorical variable. The variable Winner is also a nominal categrical variable. The variable District is also a nominal categrical variable.
+The variable WWBID, LFWBID, LFCBID is a continous numerical variable.
+
+__Descriptive Statistics__
+
+Year : This variable contains 9 categories, each year has a similar frequency between 39 and 51, except 1991 which is 18.
+
+Market : This variable contains only 2 categories(Tri-county and Surround),Surround is a lot larger than tri-county, approximately 71% comapred to 29% respectively. 
+
+Winner : This variable contains 20 categories, Trauth and Meyer have a signifigantly larger frequency than the other Winners, approximately 27.55% and 22.45% resepctively. Borden, Falv-o-Rich, Cloverlead and Southern Belle are also have larger frequencies than the rest, 10.71%, 9.18%, 7.91% and 6.63% respectively. The other 14 are all under 3.1% relative frequency.
+
+District : The number of distinct districts over the years in our data is 51, which increased from 1983 till 1986 where it became stable, it then began to drop from 1989 to 1990 and dropped drastically from 1990-1991. We suspect it was because of the drop in dairy price from 1990 to 1991.
+
+WWBID, LFCBID, LFWBID : These variables are signficantly skewed to the right. There doesnt appear to be any outliers. The data being skewed right suggests that majority of the prices were above the competitive average price for low-fat chocolate milk. The sizes of these vaiables are over 40, by the central limit theorem all these variables have an approximate normal distribution.
+
+__Analysis and Main Findings__
+
+__Objective__
+
+In several school districts in northern Kentucky (called the “tricounty” market), two suppliers-Meyer Dairy and Trauth Dairy - were accused of price-fixing - That is, conspiring to allocate the districts so that the winning bidder was predetermined and the price per pint was set above the competitive price. Our objective is to determine if the accusation is true or false.
+
+
+
+# Research Questions and Hypothesis
+
+__Research Questions__
+
+1. Did Meyer and Trauth conspire to rig their bids in the tricounty market? Economic theory states that, if so, the mean winning price in the rigged tricounty market will be higher than the mean winning price in the competitive surrounding market. Is there support for the claim that the dairies in the tricounty market participated in collusive practices?
+
+2. Market allocation is a common form of collusive behaviour in bid-rigging conspiracies. Under collusion, the same dairy usually controls the same school districts year after year. The incumbency rate for a market is defined as the proportion of school districts that are won by the vendor that won the previous year. Past experience with milk bids in a competitive environment reveals that a typical incumbency rate is 0.7. That is, 70% of the school districts are expected to purchase their milk from the dairy that won the previous year. Incumbency rates of 0.9 or higher are strong indicators of collusive bidding. Over the years, when bid collusion was alleged to have occurred in northern Kentucky, there were 51 potential vendor transitions (i.e. changes in milk supplier from one year to the next year in a district.) in the tricounty market, and 134 potential vendor transitions in the surrounding market. By comparing the two incumbency rates of the tricounty and surrounding milk markets, can you get the results to further support for the bid collusion theory?
+
+__Hypothesis__
+
+The dairy companies Trauth and Meyer colluded in the tri-county market between the years 1984 and 1988
+
+
+1. Null Hypothesis: the mean for the WWBID, LFCBID, and LFWBID in the Surround Market is greater than or equal to the yearly mean for the WWBID, LFCBID, and LFWBID in the Tri-County Market between the years 1984 and 1988.\
+   Alternative Hypothesis: the yearly mean for the WWBID, LFCBID, and LFWBID in the Surround Market is less than the yearly mean for the WWBID, LFCBID, and LFWBID in the Tri-County Market between the years 1984 and 1988.
+
+2. Null Hypothesis: the incumbency rates in the Tri-county market between the years 1984 and 1988 is lesser than and equal to 70%.\
+   Alternative Hypothesis: the incumbency rates between the years 1984 and 1988 in the Tri-county market is greater than 70%.
+
+# Statistical Inference
+
+__Statistical Inference Methods__
+
+Assumptions
+
+* The sample population has a distribution that is approximately normal
+
+* Sample is random from a large population
+
+Question 1. \
+See Part A in Appendix \
+ $x_{1}$ : Surround price yearly average \
+ $x_{2}$ : Tri-County price yearly average \
+ $x_{d}$ = $x_{1}$ - $x_{2}$  \
+ $\overline{x_{d}}$ = -0.01885896 \
+ $s_{d}$ =  0.006932496\
+ $n_{d}$ = 5 \
+ Target population parameter : $μ_{d}$ \
+ Sample size : 5, Use Paired t-distribution \
+ Statistical Inference : Test of Hypothesis \
+ t statistic = $\frac{\overline{x_{d}}}{s_{d}(\frac{1}{√n_{d}})}$  
+ = -6.0829
+
+See Part B in Appendix \
+WWBID\
+ $x_{1}$ : Surround WWBID price yearly average \
+ $x_{2}$ : Tri-County WWBID price yearly average \
+ $x_{d}$ = $x_{1}$ - $x_{2}$  \
+ $\overline{x_{d}}$ = -0.017515 \
+ $s_{d}$ =  0.006669253\
+ $n_{d}$ = 5 \
+ Target population parameter : $μ_{d}$ \
+ Sample size : 5, Use Paired t-distribution \
+ Statistical Inference : Test of Hypothesis \
+ t statistic = $\frac{\overline{x_{d}}}{s_{d}(\frac{1}{√n_{d}})}$  
+ = -5.8724
+            
+LFWBID\
+ $x_{1}$ : Surround LFWBID price yearly average\
+ $x_{2}$ : Tri-County LFWBID price yearly average\
+ $x_{d}$ = $x_{1}$ - $x_{2}$  \
+ $\overline{x_{d}}$ = -0.01997653 \
+ $s_{d}$ =  0.006669772\
+ $n_{d}$ = 5 \
+ Target population parameter : $μ_{d}$ \
+ Sample size : 5, Use Paired t-distribution \
+ Statistical Inference : Test of Hypothesis \
+ t statistic = $\frac{\overline{x_{d}}}{s_{d}(\frac{1}{√n_{d}})}$  
+= -6.6972
+   
+   
+LFCBID
+ $x_{1}$ : Surround LFCBID price yearly average \
+ $x_{2}$ : Tri-County LFCBID price yearly average \
+ $x_{d}$ = $x_{1}$ - $x_{2}$  \
+ $\overline{x_{d}}$ = -0.02102761 \
+ $s_{d}$ =  0.007325544\
+ $n_{d}$ = 5 \
+ Target population parameter : $μ_{d}$ \
+ Sample size : 5, Use Paired t-distribution \
+ Statistical Inference : Test of Hypothesis \
+ t statistic = $\frac{\overline{x_{d}}}{s_{d}(\frac{1}{√n_{d}})}$ 
+ = -6.4185
+            
+Question 2. \
+See Part C in Appendix \
+ $\overline{x$ = 0.7653061\
+ $μ_{0}$ = 0.7\
+ $n$ = 4\
+ $s$ = 0.03534798\
+ Target population parameter : $μ$\
+ Sample size : 4, Use Paired t-distribution\
+ Statistical Inference : Test of Hypothesis\
+ t statistic = $\frac{\overline{x} - μ_{0}}{s(\frac{1}{√n)}$ 
+ = 3.695
+
+
+# Results: Analysis and Interpretation
+
+__Analysis__ 
+
+Question 1.\
+See Part A in Appendix \
+ α = .05\
+ p-value = 0.001846
+ We cannot reject the null hypothesis since p-value < α\
+
+See Part B in Appendix \
+ WWBID p-value = 0.0021\
+ LFWBID p-value = 0.001293\
+ LFCBID p-value = 0.001514\
+ We reject the null hypothesis since WWBID p-value < α, LFWBID p-value < α, and LFCBID p-value < α\
+ 
+Question 2.\
+See Part C in Appendix \
+ α = .05\
+ p-value = 0.0172\
+ We reject the null hypothesis since  p-value < α\
+
+__Interpretation__
+
+Question 1
+Based on the yearly average prices, there is evidence at the 5% level that the yearly mean for the WWBID, LFCBID, and LFWBID in the Surround Market is less than the yearly mean for the WWBID, LFCBID, and LFWBID in the Tri-County Market between the years 1984 and 1988.
+
+Question2
+Based on the incumbency rate of the tri-county market between the years 1984 and 1988, there is evidence at the 5% level the incumbency rates in the Tri-county market exceeds 70% which is a sign of non-collusive behaviour..
+
+
+# Conclusion
+
+There is a collusive environment in the Tri-County market and the market shares, bid dispersions, Comparison of average winning bid prices and incumbency rates all suggest any collusive bidding patterns
+
+
+
+
+
+
+# Appendix1
+
+
+
+
+#Appendix2
+__Tables__
+__Graphs__
+
+
+
+##Question 1
+Did Meyer and Trauth conspire to rig their bids in the tricounty market? Economic theory states that, if so, the mean winning price in the rigged tricounty market will be higher than the mean winning price in the competitive surrounding market. Is there support for the claim that the dairies in the tricounty market participated in collusive practices?
+```{r }
+library(tidyverse)
+MILK <- read_csv("MILK.CSV" )
+MILK$District <- as.character(MILK$District)
+MILK$Year <- as.character(MILK$Year)
+summary(MILK)
+```
+
+
+
+# A
+```{r}
+MILK4 <- filter(MILK, !is.na(MILK$WWBID) )
+MILK4 <- filter(MILK4, !is.na(MILK4$LFCBID) )
+MILK4 <- filter(MILK4,  !is.na(MILK4$LFWBID))
+ave <- data.frame(matrix(ncol = 3, nrow = 0))
+colnames(ave) <- c("Year", "Average")
+for (i in c(1984:1988)){
+  ave <- rbind(ave, c(i, mean(c(mean(filter(MILK4, Year == i & Market == "SURROUND")$WWBID),mean(filter(MILK4, Year == i & Market == "SURROUND")$LFWBID),mean(filter(MILK4, Year == i & Market == "SURROUND")$LFCBID)))
+                      ,mean(c( mean(filter(MILK4, Year == i & Market == "TRI-COUNTY")$WWBID),mean(filter(MILK4, Year == i & Market == "TRI-COUNTY")$LFCBID),mean(filter(MILK4, Year == i & Market == "TRI-COUNTY")$LFWBID)))))
+}
+colnames(ave) <- c("Year", "Average_SURROUND", "Average_TRI_COUNTY")
+ave
+ave1 <- gather(ave, key = "Market", value = "Mean_price", "Average_SURROUND", "Average_TRI_COUNTY")
+ggplot(data = ave1, aes(x = Year, y = Mean_price, color = Market)) +
+  geom_line()+
+  geom_point()+ 
+  labs(y = "WWBID mean price") + 
+  scale_x_discrete(limits = ave$Year)
+#95% t.test Paired Data TOH
+t.test(ave$Average_SURROUND-ave$Average_TRI_COUNTY,alternative="less",mu=0,conf.level=1-.05)
+sd(ave$Average_SURROUND-ave$Average_TRI_COUNTY)
+```
+# B
+Comparing the mean 
+
+```{r}
+MILK1 <- filter(MILK, !is.na(MILK$WWBID))
+ave <- data.frame(matrix(ncol = 3, nrow = 0))
+colnames(ave) <- c("Year", "Average")
+for (i in c(1984:1988)){
+  ave <- rbind(ave, c(i, mean(filter(MILK1, Year == i & Market == "SURROUND")$WWBID), mean(filter(MILK1, Year == i & Market == "TRI-COUNTY")$WWBID)))
+}
+colnames(ave) <- c("Year", "Average_SURROUND", "Average_TRI_COUNTY")
+ave
+ave1 <- gather(ave, key = "Market", value = "Mean_price", "Average_SURROUND", "Average_TRI_COUNTY")
+ggplot(data = ave1, aes(x = Year, y = Mean_price, color = Market)) +
+  geom_line()+
+  geom_point()+ 
+  labs(y = "WWBID mean price") + 
+  scale_x_discrete(limits = ave$Year)
+#95% t.test Paired Data TOH
+t.test(ave$Average_SURROUND-ave$Average_TRI_COUNTY,alternative="less",mu=0,conf.level=1-.05)
+sd(ave$Average_SURROUND-ave$Average_TRI_COUNTY)
+```
+
+As can be seen in the graph, the mean TRI-COUNTY white milk bidding price is always higher than that of the SURROUND. Based on the mean of both TRI_COUNTY and SURROUND white milk bidding price, there is evidence at the 5% level that the mean winning price in the rigged tricounty market will be higher than the mean winning price in the competitive surrounding market for the white milk bidding price.
+
+
+```{r}
+MILK2 <- filter(MILK, !is.na(MILK$LFWBID))
+ave <- data.frame(matrix(ncol = 3, nrow = 0))
+colnames(ave) <- c("Year", "Average")
+for (i in c(1984:1988)){
+  ave <- rbind(ave, c(i, mean(filter(MILK2, Year == i & Market == "SURROUND")$LFWBID), mean(filter(MILK2, Year == i & Market == "TRI-COUNTY")$LFWBID)))
+}
+colnames(ave) <- c("Year", "Average_SURROUND", "Average_TRI_COUNTY")
+ave
+ave1 <- gather(ave, key = "Market", value = "Mean_price", "Average_SURROUND", "Average_TRI_COUNTY")
+ggplot(data = ave1, aes(x = Year, y = Mean_price, color = Market)) +
+  geom_line()+
+  geom_point()+ 
+  labs(y = "LFWBID mean price")  + 
+  scale_x_discrete(limits = ave$Year)
+#95% t.test Paired Data TOH
+t.test(ave$Average_SURROUND-ave$Average_TRI_COUNTY,alternative="less",mu=0,conf.level=1-.05)
+sd(ave$Average_SURROUND-ave$Average_TRI_COUNTY)
+```
+
+As can be seen in the graph, the mean TRI-COUNTY winning bid price of low-fat white milk average is always higher than that of the SURROUND. Based on the mean of both TRI_COUNTY and SURROUND winning bid price of low-fat white milk , there is evidence at the 5% level that the mean winning bid price of low-fat white milk in the rigged tricounty market will be higher than the mean winning price in the competitive surrounding market for the winning bid price of low-fat white milk.
+
+
+```{r}
+MILK3 <- filter(MILK, !is.na(MILK$LFCBID))
+ave <- data.frame(matrix(ncol = 3, nrow = 0))
+colnames(ave) <- c("Year", "Average")
+for (i in c(1984:1988)){
+  ave <- rbind(ave, c(i, mean(filter(MILK3, Year == i & Market == "SURROUND")$LFCBID), mean(filter(MILK3, Year == i & Market == "TRI-COUNTY")$LFCBID)))
+}
+colnames(ave) <- c("Year", "Average_SURROUND", "Average_TRI_COUNTY")
+ave
+ave1 <- gather(ave, key = "Market", value = "Mean_price", "Average_SURROUND", "Average_TRI_COUNTY")
+ggplot(data = ave1, aes(x = Year, y = Mean_price, color = Market)) +
+  geom_line()+
+  geom_point()+ 
+  labs(y = "LFCBID mean price") + 
+  scale_x_discrete(limits = ave$Year)
+#95 % t.test Paired Data TOH
+t.test(ave$Average_SURROUND-ave$Average_TRI_COUNTY,alternative="less",mu=0,conf.level=1-.05)
+sd(ave$Average_SURROUND-ave$Average_TRI_COUNTY)
+```
+
+As can be seen in the graph, the mean TRI-COUNTY winning bid price of low-fat chocolate milk is always higher than that of the SURROUND. Based on the mean of both TRI_COUNTY and SURROUND winning bid price of low-fat chocolate milk, there is evidence at the 5% level that the mean winning bid price of low-fat chocolate milk in the rigged tricounty market will be higher than the mean winning price in the competitive surrounding market for winning bid price of low-fat chocolate milk.
+
+# C
+
+```{r}
+SURROUND <- filter(MILK, Market == "SURROUND")
+TRI_COUNTY <- filter(MILK, Market == "TRI-COUNTY")
+TRI<- TRI_COUNTY %>% gather(key = "Milk", value = "Price", WWBID, LFWBID, LFCBID)  %>% select(Year, District, Winner, Milk) %>% group_by(Year, District) %>% mutate(grouped_id = row_number()) %>% spread(Year, Winner) %>% 
+  select(-grouped_id)
+SUR <- SURROUND %>% gather(key = "Milk", value = "Price", WWBID, LFWBID, LFCBID) %>% select(Year, District, Winner, Milk) %>% group_by(Year, District) %>% mutate(grouped_id = row_number())%>% spread(Year, Winner) %>% 
+  select(-grouped_id)
+TRI
+SUR
+
+rate1 <- c(
+           sum(TRI$`1984` == TRI$`1985`, na.rm = T)/49,
+           sum(TRI$`1985` == TRI$`1986`, na.rm = T)/49,
+           sum(TRI$`1986` == TRI$`1987`, na.rm = T)/49,
+           sum(TRI$`1987` == TRI$`1988`, na.rm = T)/49
+)
+
+rate2 <- c(
+           sum(SUR$`1984` == SUR$`1985`, na.rm = T)/124,
+           sum(SUR$`1985` == SUR$`1986`, na.rm = T)/124,
+           sum(SUR$`1986` == SUR$`1987`, na.rm = T)/124,
+           sum(SUR$`1987` == SUR$`1988`, na.rm = T)/124)
+incumbency_rate_tri <- data.frame(c(1984:1991), rate1)
+colnames(incumbency_rate_tri) <- c("Year", "Incumbency_rate")
+incumbency_rate_sur <- data.frame(c(1984:1991), rate2)
+colnames(incumbency_rate_sur) <- c("Year", "Incumbency_rate")
+t.test(rate1,alternative = "greater", mu = .7, conf.level = 1-.05)
+sd(rate1)
+```
+
+
+# Checking if there is a collusive environment
+
+Collusive Market Environment: certain economic features of a market create an environment in which collusion may be found. These basic features include the following:
+– Few sellers and high concentration. Only a few diaries control all or nearly all of the milk business in the market.
+```{r}
+TRI_COUNTY <- filter(MILK, Market == "TRI-COUNTY")
+summarise(group_by(TRI_COUNTY, Winner), freq = n())
+```
+– Homogeneous products. The products sold are essentially the same from the standpoint of the buyer, i.e., the school district.
+– Inelastic demand. Demand is relatively insensitive to price. Note: the quantity of milk required by a school district is primarily determined by school enrollment, not price.
+– similar costs. The dairies bidding for the milk contracts face similar cost conditions. Note: approximately 60% of a dairy’s production cost is raw milk, which is federally regulated. Meyer and Trauth are dairies of similar size, and both bought their raw milk from the same supplier.
+
+Collusive Bidding Patterns: The analyses of patterns in sealed bids reveal much about the level of competition, or lack thereof, among the vendors serving the market. Con- sider the following bid analyses:
+
+– Market shares. A market share for a dairy is the number of milk half-pint supplied by the diary over a given school year, divided by the total number of half-pints supplied to the entire market. One sign of potential collusive behavior is stable, nerly equal market shares over time for the dairies under investigation.
+```{r}
+
+TRI_COUNTY <- filter(MILK, Market == "TRI-COUNTY")
+market_share <- data.frame(matrix(ncol = 3, nrow = 0))
+for (i in c(1983:1991)){
+  market_share <- rbind(market_share, c(i, nrow(filter(TRI_COUNTY, Year == i & Winner == "MEYER")), nrow(filter(TRI_COUNTY, Year == i & Winner == "TRAUTH"))))
+}
+colnames(market_share) <- c("Year", "MEYER", "TRAUTH")
+market_share
+```
+
+– Bid levels and dispersion. In competitive sealed bid markets, vendors do not share information about their bids. Consequently, more dispersion or variability among the bids is observed than in collusive markets., where vendors communicate about their bids and have a tendency to submit bids in close proximity to one another in an attempt to make the bidding appear competitive. Furthermore, in competitive markets the bid dispersion tends to be directly proportional to the level of the bid: when bids are submitted at relatively high levels, there is more variability among the bids than when they are submitted at or near marginal cost, which will be approximately the same among dairies in the same geographic market.
+```{r}
+SURROUND <- filter(MILK, Market == "SURROUND")
+SURROUND <- filter(SURROUND, Year > 1983 )
+SURROUND <- filter(SURROUND,  Year< 1988)
+TRI_COUNTY <- filter(MILK, Market == "TRI-COUNTY")
+TRI_COUNTY <- filter(TRI_COUNTY, Year > 1983 )
+TRI_COUNTY <- filter(TRI_COUNTY, Year< 1988 )
+var(TRI_COUNTY$WWBID, na.rm = T) 
+var(SURROUND$WWBID, na.rm = T)
+var(TRI_COUNTY$LFWBID, na.rm = T) 
+var(SURROUND$LFWBID, na.rm = T)
+var(TRI_COUNTY$LFCBID, na.rm = T) 
+var(SURROUND$LFCBID, na.rm = T)
+```
+
+– Bid sequence. School milk bids are submitted over the spring and summer months, generally at the end of one school year and before the beginning of the next. When the bids are examined in sequence in competitive markets, the level of bidding is expected to fall as the bidding season progresses. (This phenomenon is attributable to the learning process that occurs during the season, with bids adjusted accordingly. Dairies may submit relatively high bids early in the season to “test the market”, confident that volume can be picked up later if the early high bids lose. But, dairies who do not win much business early in the season are likely to become more aggressive in their bidding as the season progresses, driving price levels down.) Constant or slightly increasing price patterns of sequential bids in a market where a single dairy wins year after year is considered another indication of collusive behaviour. True See A and B
+
+
